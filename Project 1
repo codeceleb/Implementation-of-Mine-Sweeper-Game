@@ -406,14 +406,7 @@ void playMinesweeper ()
     // Place the Mines randomly
     placeMines (mines, realBoard);
  
-     /*
-     If you want to cheat and know
-     where mines are before playing the game
-     then uncomment this part
- 
-     cheatMinesweeper(realBoard);
-     */
- 
+   
     // You are in the game until you have not opened a mine
     // So keep playing
  
@@ -453,33 +446,33 @@ void playMinesweeper ()
 void chooseDifficultyLevel ()
 {
     /*
-    --> BEGINNER = 9 * 9 Cells and 10 Mines
-    --> INTERMEDIATE = 16 * 16 Cells and 40 Mines
-    --> ADVANCED = 24 * 24 Cells and 99 Mines
+    -->  Child = 9 * 9 Cells and 10 Mines
+    --> Adult = 16 * 16 Cells and 40 Mines
+    --> Adult = 24 * 24 Cells and 99 Mines
     */
  
     int level;
  
     printf ("Enter the Difficulty Level\n");
-    printf ("Press 0 for BEGINNER \n");
-    printf ("Press 1 for INTERMEDIATE\n");
-    printf ("Press 2 for ADVANCED\n");
+    printf ("Press 0 for Child \n");
+    printf ("Press 1 for Teenager\n");
+    printf ("Press 2 for Adult \n");
  
     scanf ("%d", &level);
  
-    if (level == BEGINNER)
+    if (level == Child )
     {
         SIDE = 9;
         MINES = 10;
     }
  
-    if (level == INTERMEDIATE)
+    if (level ==Teenager)
     {
         SIDE = 16;
         MINES = 40;
     }
  
-    if (level == ADVANCED)
+    if (level == Adult)
     {
         SIDE = 24;
         MINES = 99;
